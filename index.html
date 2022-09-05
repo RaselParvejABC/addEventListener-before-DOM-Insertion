@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attaching Event Listener before Inserting into DOM</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      .boxes {
+        display: flex;
+        justify-content: center;
+      }
+      .target {
+        color: white;
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+        padding: 50px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .before {
+        background-color: blue;
+      }
+      .after {
+        background-color: blueviolet;
+      }
+    </style>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="target before">.target BEFORE Attaching Listener</div>
+    </div>
+
+    <p>
+      RESULT: You can attach an Event Listener to an Element only After it's
+      into DOM.
+    </p>
+    <p>
+      Event Listener on a Class applies only to the present Elements with the
+      class, not the Future Elements with the Class.
+    </p>
+  </body>
+</html>
